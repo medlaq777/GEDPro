@@ -5,7 +5,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config = new DocumentBuilder()
-    .setTitle('GETpro-API-APP')
+    .setTitle('GETPro-API-APP')
     .setDescription('API Documentation')
     .setVersion('1.0')
     .addBearerAuth()
