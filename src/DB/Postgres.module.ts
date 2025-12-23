@@ -5,6 +5,7 @@ import { ConfigService } from '@nestjs/config';
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
+      name: 'postgres',
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
         type: 'postgres',
@@ -19,4 +20,4 @@ import { ConfigService } from '@nestjs/config';
     }),
   ],
 })
-export class DatabasModule {}
+export class PostgresModule {}

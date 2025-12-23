@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DatabasModule } from './DB/database.module';
+import { PostgresModule } from './DB/Postgres.module';
+import { MongoModule } from './DB/Mongo.module';
 
 @Module({
   imports: [
@@ -8,7 +9,8 @@ import { DatabasModule } from './DB/database.module';
       isGlobal: true,
       envFilePath: '.env',
     }),
-    DatabasModule,
+    PostgresModule,
+    MongoModule,
   ],
 })
 export class AppModule {}
